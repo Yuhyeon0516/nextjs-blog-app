@@ -15,7 +15,7 @@ const Home = ({
   }[];
 }) => {
   return (
-    <div>
+    <div className={homeStyles.container}>
       <Head>
         <title>Yuhyeon Kim Blog App</title>
         <link rel="icon" href="https://avatars.githubusercontent.com/u/120432007?v=4" />
