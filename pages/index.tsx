@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import homeStyles from "../styles/Home.module.css";
 import { getSortedPostsData } from "../lib/post";
+import Link from "next/link";
 
 const Home = ({
   allPostsData,
@@ -28,7 +29,9 @@ const Home = ({
         <ul className={homeStyles.list}>
           {allPostsData.map(({ id, title, date }) => (
             <li className={homeStyles.listItem} key={id}>
-              <a>{title}</a>
+              <Link href={`/posts/${id}`} legacyBehavior>
+                <a>{title}</a>
+              </Link>
               <br />
               <small className={homeStyles.lightText}>{date}</small>
             </li>
